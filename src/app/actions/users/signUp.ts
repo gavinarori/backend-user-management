@@ -38,7 +38,7 @@ export const signUp = async (email: string, password: string) => {
     })
 
     await sendEmail({
-        from: 'Admin <admin@modernwebdevelopment.net>',
+        from: 'Admin <onboarding@resend.dev>',
         to: [email],
         subject: 'Verify your email address',
         react: VerifyEmailEmailTemplate({email, emailVerificationToken}) as React.ReactElement
