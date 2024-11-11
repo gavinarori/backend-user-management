@@ -33,7 +33,7 @@ export const resetPassword = async (email: string) => {
     })
 
     await sendEmail({
-        from: 'Admin <admin@modernwebdevelopment.net>',
+        from: 'Admin <onboarding@resend.dev>',
         to: [email],
         subject: 'Reset your password',
         react: ResetPasswordEmailTemplate({email, resetPasswordToken}) as React.ReactElement

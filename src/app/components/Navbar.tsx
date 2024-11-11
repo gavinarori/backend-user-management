@@ -2,7 +2,6 @@ import React from 'react';
 import { authOptions } from '../api/auth/[...nextauth]/route';
 import { getServerSession } from 'next-auth/next';
 import Link from 'next/link';
-import TestEmailButton from './TestEmailButton';
 
 const Navbar = async () => {
     const session = await getServerSession(authOptions);
@@ -26,7 +25,6 @@ const Navbar = async () => {
                 </>
             )}
 
-            <TestEmailButton />
         </div>
     );
 };
