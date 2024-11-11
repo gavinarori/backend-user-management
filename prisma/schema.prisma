@@ -6,20 +6,16 @@ generator client {
 }
 
 datasource db {
-  provider     = "mysql"
-  url          = env("DATABASE_URL")
-  relationMode = "prisma"
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
 }
 
 model User {
-  id String @id @default(cuid())
-
-  email        String @unique
-  passwordHash String
-
-  resetPasswordToken String? @unique
+   id                     String @id @default(auto()) @map("_id") @db.ObjectId 
+  email                   String   @unique
+  passwordHash            String
+  resetPasswordToken      String?  @unique
   resetPasswordTokenExpiry DateTime?
-
-  emailVerified Boolean @default(false)
-  emailVerificationToken String? @unique
+  emailVerified           Boolean  @default(false)
+  emailVerificationToken  String?  @unique
 }
