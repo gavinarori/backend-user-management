@@ -1,5 +1,4 @@
-import ChangePasswordForm from '@/app/components/ChangePasswordForm';
-import ResetPasswordForm from '@/app/components/ResetPasswordForm';
+
 import prisma from '@/app/lib/prisma';
 import React from 'react';
 
@@ -15,7 +14,7 @@ const VerifyEmailPage = async ({ searchParams }: VerifyEmailPageProps) => {
             },
         });
         if (!user) {
-            return <div>Invalid token</div>;
+            return <div className="flex justify-center items-center ">Invalid token</div>;
         }
 
         await prisma.user.update({
@@ -29,7 +28,7 @@ const VerifyEmailPage = async ({ searchParams }: VerifyEmailPageProps) => {
         })
 
         return (
-            <div>
+            <div className="flex justify-center items-center ">
                 <h1>
                     Email verified for <b>{user.email}</b>!
                 </h1>
@@ -37,7 +36,7 @@ const VerifyEmailPage = async ({ searchParams }: VerifyEmailPageProps) => {
         )
     } else {
         return (
-            <div>
+            <div className="flex justify-center items-center">
                 <h1>Verify Email</h1>
                 No email verification token found. Check your email.
             </div>
