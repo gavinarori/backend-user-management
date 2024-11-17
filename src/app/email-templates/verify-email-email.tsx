@@ -5,9 +5,8 @@ interface VerifyEmailEmailTemplateProps {
     emailVerificationToken: string;
 }
 
-export const VerifyEmailEmailTemplate: React.FC<Readonly<VerifyEmailEmailTemplateProps>> = ({ email, emailVerificationToken }) => (
+export const VerifyEmailEmailTemplate: React.FC<Readonly<VerifyEmailEmailTemplateProps>> = ({  emailVerificationToken }) => (
     <div>
-        <h1>Verify email for <b>{email}</b></h1>
         <p>
             To verify your email, click on this link:
         </p>
