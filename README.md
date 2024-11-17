@@ -1,11 +1,7 @@
-Source code for video tutorial: [Tutorial: Email System (Forgot Password + Email Verification) with Next.js V13 (APP ROUTER) + Resend](https://youtu.be/0KHkIJwRoLM)
+
 
 ## Getting Started
 
-### Set up PlanetScale database
-
-1. Create a PlanetScale account and a MySQL database (https://planetscale.com/).
-2. Copy the database URL from the PlanetScale dashboard and set it as the `DATABASE_URL` environment variable in `.env`.
 
 ### Set up Resend account
 
@@ -36,8 +32,3 @@ npm run dev
 
 ## Deploy on Vercel
 The easiest way to deploy this project is to use the [Vercel Platform](https://vercel.com/docs/deployments/overview) from the creators of Next.js.
-
-## What's next?
-Share the video and subscribe to the channel if you want to see more videos like this. I will be posting more videos on Next.js, React, TypeScript, and other web technologies, so stay tuned!
-
-## Check out my other videos on [YouTube](https://www.youtube.com/channel/UCm4jwz-lWqNJ_5eG-37cuwQ)
