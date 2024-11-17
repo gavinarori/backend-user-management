@@ -17,7 +17,7 @@ export const signUp = async (email: string, password: string) => {
         return 'User with that email already exists.';
     }
 
-    const passwordHash = bcrypt.hashSync(password, 10);
+    const passwordHash = bcrypt.hashSync(password, 10 );
 
     const createdUser = await prisma.user.create({
         data: {
